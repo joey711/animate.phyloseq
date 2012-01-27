@@ -1,0 +1,28 @@
+Package: animate.phyloseq
+Version: 0.1.1
+Date: 2012-01-27
+Maintainer: Paul J. McMurdie <mcmurdie@stanford.edu>
+License: AGPL-3
+Title: Animation tools to complement the phyloseq package
+Type: Package
+Author: Paul J. McMurdie <mcmurdie@stanford.edu>
+Description: The phyloseq package is a recent addition to the Bioconductor
+    repository. One of the goals of the phyloseq project is syntactically
+    streamlined tools for creating publication-quality graphics based on
+    phylogenetic sequencing data using ggplot2. This package is intended to
+    complement phyloseq by providing tools for animating phyloseq graphics.
+    However, some of the tools can work generally on any data.frame, and so may
+    be of use beyond phylogenetic sequencing analysis. The animations are
+    created entirely via ggplot2 and animation packages. The animation package
+    further depends on external conversion tools, e.g. ImageMagick or FFmpeg.
+Imports:
+    animation (>= 2.0),
+    phyloseq (>= 0.99),
+    vegan (>= 2.0)
+Depends:
+    R (>= 2.13.0),
+    methods,
+    ggplot2 (>= 0.8)
+SystemRequirements: ImageMagick (http://imagemagick.org)
+Collate:
+    'animation-methods.R'

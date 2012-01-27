@@ -1,0 +1,5 @@
+v0.1.1
+===========
+Basic functionality created. Currently only creates .gif animations and depends only on ImageMagick. Additional dependencies should be added as new animation types are supported (.mp4)
+
+* basic examples included.
