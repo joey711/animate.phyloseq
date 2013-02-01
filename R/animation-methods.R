@@ -210,7 +210,7 @@ animate <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3],
 #' ##### 
 animate_ordination <- function(physeq, t, ord.result, axes = c(1, 2), color=NULL, shape=NULL, ggplot2_expr=NULL, movie.name="animation.gif", ...){
 	# Now grab the scores from the first two axes of that result
-	ord.co  <- scores(ord.result, axes, "sites")
+	ord.co  <- scores(ord.result, choices=axes, "sites")
 	x <- colnames(ord.co)[1]
 	y <- colnames(ord.co)[2]
 	
