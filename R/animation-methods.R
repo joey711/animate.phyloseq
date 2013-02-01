@@ -97,7 +97,7 @@
 #' #			 )
 #' # })
 #' #########
-animate <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3], 
+animate2 <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3], 
 		color=NULL, shape=NULL, ggplot2_expr=NULL, movie.name="animation.gif", ...){
 	
 	# require("animation"); require("ggplot2")		
@@ -118,11 +118,11 @@ animate <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3],
 			p <- ggplot2::ggplot(df) + 		
 				# Create the core plot based on the subset of data up to the
 				# current step, drawing path-only.
-				ggplot2::geom_path(
-					ggplot2::aes_string(x=x, y=y, color=color, shape=shape), 
-					data  = df[istep<=i, ],
-					alpha = I(1)
-				) + 
+                # ggplot2::geom_path(
+                #   ggplot2::aes_string(x=x, y=y, color=color, shape=shape), 
+                #   data  = df[istep<=i, ],
+                #   alpha = I(1)
+                # ) + 
 				# Set the ranges to be same for all plots
 				ggplot2::xlim(range(df[, x])) + ggplot2::ylim(range(df[, y])) + 
 				# Add the layer for the points at this time-step
@@ -208,7 +208,7 @@ animate <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3],
 #' @importFrom vegan scores
 #' @examples
 #' ##### 
-animate_ordination <- function(physeq, t, ord.result, axes = c(1, 2), color=NULL, shape=NULL, ggplot2_expr=NULL, movie.name="animation.gif", ...){
+animate_ordination2 <- function(physeq, t, ord.result, axes = c(1, 2), color=NULL, shape=NULL, ggplot2_expr=NULL, movie.name="animation.gif", ...){
 	# Now grab the scores from the first two axes of that result
 	ord.co  <- scores(ord.result, choices=axes, "sites")
 	x <- colnames(ord.co)[1]
