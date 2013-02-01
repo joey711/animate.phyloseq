@@ -97,7 +97,7 @@
 #' #			 )
 #' # })
 #' #########
-animate2 <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3], 
+animate <- function(df, t=colnames(df)[1], x=colnames(df)[2], y=colnames(df)[3], 
 		color=NULL, shape=NULL, ggplot2_expr=NULL, movie.name="animation.gif", ...){
 	
 	# require("animation"); require("ggplot2")		
